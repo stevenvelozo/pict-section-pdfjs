@@ -1,0 +1,39 @@
+{
+    "name": "simple_fileviewer",
+    "version": "1.0.0",
+    "description": "Basic File Viewer Application",
+    "main": "Simple-File-Viewer-Application.js",
+    "scripts": {
+        "start": "node Simple-File-Viewer-Application.js",
+        "build": "node develop.js",
+        "dev": "node develop.js && npx http-server ./dist"
+    },
+    "author": "steven",
+    "license": "MIT",
+    "copyFilesSettings": {
+        "whenFileExists": "overwrite"
+    },
+    "copyFiles": [
+        {
+            "from": "./html/*",
+            "to": "./dist/"
+        },
+        {
+            "from": "../../node_modules/pict/dist/*",
+            "to": "./dist/"
+        },
+        {
+            "from": "./node_modules/pdfjs-viewer-element/dist/*",
+            "to": "./dist/"
+        }
+    ],
+    "dependencies": {
+        "extract-zip": "^2.0.1",
+        "follow-redirects": "^1.15.9",
+        "http-server": "^14.1.1",
+        "pdfjs-viewer-element": "^2.6.5",
+        "pict": "^1.0.210",
+        "pict-application": "^1.0.19",
+        "pict-view": "^1.0.51"
+    }
+}

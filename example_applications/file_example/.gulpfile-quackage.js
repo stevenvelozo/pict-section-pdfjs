@@ -1,0 +1,2 @@
+require('/Users/jacksonpollard/pict-section-pdfjs/node_modules/quackage/gulp/Quackage-Gulpfile.js');
+require('/Users/jacksonpollard/pict-section-pdfjs/node_modules/quackage/gulp/Quackage-Gulpfile.js');

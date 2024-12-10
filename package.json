@@ -32,5 +32,8 @@
         "watch-ignore": [
             "lib/vendor"
         ]
+    },
+    "dependencies": {
+        "pict-view": "^1.0.55"
     }
 }
