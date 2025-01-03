@@ -18,18 +18,31 @@ async function build()
 	const { stdout, stderr } = await exec('npx quack build && npx quack copy');
 	console.log('stdout:', stdout);
   	console.error('stderr:', stderr);
-	await https.get(fileUrl, (response) => {
+	https.get(fileUrl, (response) => 
+	{
 		console.log('response: ', response.statusCode);
 		response.pipe(file);
-		file.on('finish', () => {
-			file.close(async () => {
+		file.on('finish', () => 
+		{
+			file.close(async () => 
+			{
 				console.log('destination: ', destination);
 				await extract(destination, { dir: outputDestination });
 				console.log('Zip File extracted.');
+				// Clean up the zip now that we are done with it.
+				fs.unlink(destination, (err) => 
+					{
+						if (err) 
+						{
+							console.log('Error deleting file: ', err);
+						}
+					});
 			});
 		});
-	}).on('error', (err) => {
-		fs.unlink(destination, () => {
+	}).on('error', (err) => 
+	{
+		fs.unlink(destination, () => 
+		{
 			console.error('Error downloading file:', err);
 		});
 	});
