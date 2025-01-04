@@ -16,7 +16,7 @@ class PostcardApplication extends libPictApplication
 	{
 		super(pFable, pOptions, pServiceHash);
 
-		this.pict.addView('ExampleFileView', Object.assign(libPictSectionPDFJS.default_configuration, { pdfUrl:'/pdfjs-dist/web/compressed.tracemonkey-pldi-09.pdf', libLocation: './simple_fileviewer.js' }), ExampleFileView);
+		this.pict.addView('ExampleFileView', Object.assign(libPictSectionPDFJS.default_configuration, { pdfUrl:'/pdfjs-dist/web/compressed.tracemonkey-pldi-09.pdf' }), ExampleFileView);
 		this.pict.views.ExampleFileView.render();
 	}
 };

@@ -74,7 +74,7 @@ class PictSectionPDFJS extends libPictViewClass
 														"
 									>
                                 </pdfjs-viewer-element>`;
-        this.pict.ContentAssignment.assignContent("#pdfjs-injectable", viewerEl);
+        this.pict.ContentAssignment.assignContent(`${ this.options?.DefaultDestinationAddress } > #pdfjs-injectable`, viewerEl);
 	}
 
 	/*
