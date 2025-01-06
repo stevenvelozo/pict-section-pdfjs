@@ -9,7 +9,7 @@ const default_configuration =
 	"theme": "dark",
 	"styles": /*css*/``,
     "pdfUrl": "",
-    "pdfjsPath": "/pdfjs-dist",
+    "pdfjsPath": "./pdfjs-dist",
 	"Templates": [
 		{
 			"Hash": "PDFJS-Container",
